@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Detail</title>
+    <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+    <header>
+        <div class="logo">Footwear Shop</div>
+        <nav>
+            <ul>
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="products.html">Products</a></li>
+                <li><a href="cart.html">Cart</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="product-detail" data-id="7" data-name="New Balance 990v5" data-price="175">
+            <div class="product-images">
+                <img src="https://i.pinimg.com/564x/3a/c6/49/3ac649c3c4afa4faba3e60e99ad99fd3.jpg" alt="New Balance 990v5">
+            </div>
+            <div class="product-info">
+                <h2>New Balance 990v5</h2>
+                <p>The New Balance 990v5 is a perfect blend of cushioning and stability. These sneakers provide exceptional comfort and support, making them ideal for daily wear.</p>
+                <p>Price: $175</p>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+        </section>
+        <h2>Cart</h2>
+        <ul class="cart" id="cart"></ul>
+        <div class="cart-total">
+            <strong>Total: $<span id="total-amount">0.00</span></strong>
+        </div>
+        <div class="checkout">
+            <button id="checkout-button">Proceed to Checkout</button>
+            <button id="remove-all-button">Remove All</button>
+        </div>
+    </main>
+    <script src="../script.js"></script>
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Detail</title>
+    <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+    <header>
+        <div class="logo">Footwear Shop</div>
+        <nav>
+            <ul>
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="products.html">Products</a></li>
+                <li><a href="cart.html">Cart</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="product-detail" data-id="3" data-name="Loeffler Randall" data-price="395">
+            <div class="product-images">
+                <img src="https://images.pexels.com/photos/2529157/pexels-photo-2529157.jpeg" alt="Loeffler Randall">
+            </div>
+            <div class="product-info">
+                <h2>Loeffler Randall</h2>
+                <p>Loeffler Randall's shoes are known for their elegance and comfort. Perfect for both casual and formal occasions, these shoes are a versatile addition to any wardrobe.</p>
+                <p>Price: $395</p>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+        </section>
+        <h2>Cart</h2>
+        <ul class="cart" id="cart"></ul>
+        <div class="cart-total">
+            <strong>Total: $<span id="total-amount">0.00</span></strong>
+        </div>
+        <div class="checkout">
+            <button id="checkout-button">Proceed to Checkout</button>
+            <button id="remove-all-button">Remove All</button>
+        </div>
+    </main>
+    <script src="../script.js"></script>
+</body>
+</html>

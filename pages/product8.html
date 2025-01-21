@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Detail</title>
+    <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+    <header>
+        <div class="logo">Footwear Shop</div>
+        <nav>
+            <ul>
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="products.html">Products</a></li>
+                <li><a href="cart.html">Cart</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="product-detail" data-id="8" data-name="Asics Gel-Kayano" data-price="160">
+            <div class="product-images">
+                <img src="https://i.pinimg.com/564x/2d/bd/d0/2dbdd0da68370f92bc9bd7805d1b050b.jpg" alt="Asics Gel-Kayano">
+            </div>
+            <div class="product-info">
+                <h2>Asics Gel-Kayano</h2>
+                <p>The Asics Gel-Kayano offers superior cushioning and support, making it an excellent choice for runners. With its sleek design and advanced technology, these sneakers ensure a comfortable run.</p>
+                <p>Price: $160</p>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+        </section>
+        <h2>Cart</h2>
+        <ul class="cart" id="cart"></ul>
+        <div class="cart-total">
+            <strong>Total: $<span id="total-amount">0.00</span></strong>
+        </div>
+        <div class="checkout">
+            <button id="checkout-button">Proceed to Checkout</button>
+            <button id="remove-all-button">Remove All</button>
+        </div>
+    </main>
+    <script src="../script.js"></script>
+</body>
+</html>

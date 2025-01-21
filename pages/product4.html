@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Detail</title>
+    <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+    <header>
+        <div class="logo">Footwear Shop</div>
+        <nav>
+            <ul>
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="products.html">Products</a></li>
+                <li><a href="cart.html">Cart</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="product-detail" data-id="4" data-name="Isabel Marant Beth" data-price="490">
+            <div class="product-images">
+                <img src="https://images.pexels.com/photos/2529158/pexels-photo-2529158.jpeg" alt="Isabel Marant Beth">
+            </div>
+            <div class="product-info">
+                <h2>Isabel Marant Beth</h2>
+                <p>Isabel Marant Beth sneakers offer a chic and trendy look, perfect for fashion-forward individuals. These sneakers are crafted with high-quality materials for both style and durability.</p>
+                <p>Price: $490</p>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+        </class=>
+        <h2>Cart</h2>
+        <ul class="cart" id="cart"></ul>
+        <div class="cart-total">
+            <strong>Total: $<span id="total-amount">0.00</span></strong>
+        </div>
+        <div class="checkout">
+            <button id="checkout-button">Proceed to Checkout</button>
+            <button id="remove-all-button">Remove All</button>
+        </div>
+    </main>
+    <script src="../script.js"></script>
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Detail</title>
+    <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+    <header>
+        <div class="logo">Footwear Shop</div>
+        <nav>
+            <ul>
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="products.html">Products</a></li>
+                <li><a href="cart.html">Cart</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="product-detail" data-id="6" data-name="Puma RS-X" data-price="110">
+            <div class="product-images">
+                <img src="https://i.pinimg.com/564x/88/ab/b0/88abb07d6e44178bc30675ae084623a2.jpg" alt="Puma RS-X">
+            </div>
+            <div class="product-info">
+                <h2>Puma RS-X</h2>
+                <p>The Puma RS-X sneakers bring retro vibes with a modern twist. Featuring bold colors and chunky soles, these sneakers are perfect for making a fashion statement.</p>
+                <p>Price: $110</p>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+        </section>
+        <h2>Cart</h2>
+        <ul class="cart" id="cart"></ul>
+        <div class="cart-total">
+            <strong>Total: $<span id="total-amount">0.00</span></strong>
+        </div>
+        <div class="checkout">
+            <button id="checkout-button">Proceed to Checkout</button>
+            <button id="remove-all-button">Remove All</button>
+        </div>
+    </main>
+    <script src="../script.js"></script>
+</body>
+</html>

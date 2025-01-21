@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Footwear Products</title>
+    <link rel="stylesheet" href="../styles.css">
+</head>
+<body class="productbody">
+    <header>
+        <div class="logo">Footwear Shop</div>
+        <nav>
+            <ul>
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="products.html">Products</a></li>
+                <li><a href="cart.html">Cart</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <section class="product-list">
+        <h2>Our Products</h2>
+        <div class="search-bar">
+            <input type="text" id="search" placeholder="Search for footwear...">
+        </div>
+        <div class="filter-options">
+            <!-- Add filter options here -->
+        </div>
+        <div class="product-grid" id="product-grid">
+            <div class="product-item" data-id="1" data-name="Nike Air Max 90" data-price="130">
+                <a href="product1.html">
+                    <img src="https://i.pinimg.com/564x/b9/87/6b/b9876b12feed75279a6cc2e6a40c98ba.jpg" alt="Nike Air Max">
+                    <h3>Nike Air Max 90</h3>
+                    <p>$130</p>
+                </a>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+            <div class="product-item" data-id="2" data-name="Run GG rhinestone-embellished sneakers" data-price="1190">
+                <a href="product2.html">
+                    <img src="https://i.pinimg.com/564x/e4/bf/7c/e4bf7c321456f5bb5a1d4e300ad335d2.jpg" alt="Gucci Crystal GG Run">
+                    <h3>Run GG rhinestone-embellished sneakers</h3>
+                    <p>$1,190</p>
+                </a>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+            <div class="product-item" data-id="3" data-name="Loeffler Randall" data-price="395">
+                <a href="product3.html">
+                    <img src="https://images.pexels.com/photos/2529157/pexels-photo-2529157.jpeg" alt="Loeffler Randall">
+                    <h3>Loeffler Randall</h3>
+                    <p>$395</p>
+                </a>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+            <div class="product-item" data-id="4" data-name="Isabel Marant Beth" data-price="490">
+                <a href="product4.html">
+                    <img src="https://images.pexels.com/photos/2529158/pexels-photo-2529158.jpeg" alt="Isabel Marant Beth">
+                    <h3>Isabel Marant Beth</h3>
+                    <p>$490</p>
+                </a>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+            <div class="product-item" data-id="5" data-name="Adidas Ultraboost" data-price="180">
+                <a href="product5.html">
+                    <img src="https://images.pexels.com/photos/2529159/pexels-photo-2529159.jpeg" alt="Adidas Ultraboost">
+                    <h3>Adidas Ultraboost</h3>
+                    <p>$180</p>
+                </a>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+            <div class="product-item" data-id="6" data-name="Puma RS-X" data-price="110">
+                <a href="product6.html">
+                    <img src="https://i.pinimg.com/564x/88/ab/b0/88abb07d6e44178bc30675ae084623a2.jpg" alt="Puma RS-X">
+                    <h3>Puma RS-X</h3>
+                    <p>$110</p>
+                </a>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+            <div class="product-item" data-id="7" data-name="New Balance 990v5" data-price="175">
+                <a href="product7.html">
+                    <img src="https://i.pinimg.com/564x/3a/c6/49/3ac649c3c4afa4faba3e60e99ad99fd3.jpg" alt="New Balance 990v5">
+                    <h3>New Balance 990v5</h3>
+                    <p>$175</p>
+                </a>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+            <div class="product-item" data-id="8" data-name="Asics Gel-Kayano" data-price="160">
+                <a href="product8.html">
+                    <img src="https://i.pinimg.com/564x/2d/bd/d0/2dbdd0da68370f92bc9bd7805d1b050b.jpg" alt="Asics Gel-Kayano">
+                    <h3>Asics Gel-Kayano</h3>
+                    <p>$160</p>
+                </a>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+            <div class="product-item" data-id="9" data-name="Converse Chuck Taylor" data-price="55">
+                <a href="product9.html">
+                    <img src="https://i.pinimg.com/564x/85/9e/e4/859ee41191f5bad32c898cb7fc5787ca.jpg" alt="Converse Chuck Taylor">
+                    <h3>Converse Chuck Taylor</h3>
+                    <p>$55</p>
+                </a>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+            <div class="product-item" data-id="10" data-name="Vans Old Skool" data-price="60">
+                <a href="product10.html">
+                    <img src="https://i.pinimg.com/564x/7a/7e/b5/7a7eb55fb5c3357f8caee39c072605bf.jpg" alt="Vans Old Skool">
+                    <h3>Vans Old Skool</h3>
+                    <p>$60</p>
+                </a>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+        </div>
+    </section>
+    
+    <div class="cart-container">
+        <h2>Cart</h2>
+        <ul class="cart" id="cart"></ul>
+        <div class="cart-total">
+            <strong>Total: $<span id="total-amount">0.00</span></strong>
+        </div>
+        <div class="checkout">
+            <button id="checkout-button">Proceed to Checkout</button>
+            <button id="remove-all-button">Remove All</button>
+        </div>
+    </div>
+    <script src="../script.js"></script>
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Detail</title>
+    <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+    <header>
+        <div class="logo">Footwear Shop</div>
+        <nav>
+            <ul>
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="products.html">Products</a></li>
+                <li><a href="cart.html">Cart</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="product-detail" data-id="9" data-name="Converse Chuck Taylor" data-price="55">
+            <div class="product-images">
+                <img src="https://i.pinimg.com/564x/85/9e/e4/859ee41191f5bad32c898cb7fc5787ca.jpg" alt="Converse Chuck Taylor">
+            </div>
+            <div class="product-info">
+                <h2>Converse Chuck Taylor</h2>
+                <p>Converse Chuck Taylor sneakers are timeless and versatile, perfect for any casual outfit. Known for their comfort and classic design, these sneakers are a wardrobe staple.</p>
+                <p>Price: $55</p>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+        </section>
+        <h2>Cart</h2>
+        <ul class="cart" id="cart"></ul>
+        <div class="cart-total">
+            <strong>Total: $<span id="total-amount">0.00</span></strong>
+        </div>
+        <div class="checkout">
+            <button id="checkout-button">Proceed to Checkout</button>
+            <button id="remove-all-button">Remove All</button>
+        </div>
+    </main>
+    <script src="../script.js"></script>
+</body>
+</html>

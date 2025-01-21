@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Detail</title>
+    <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+    <header>
+        <div class="logo">Footwear Shop</div>
+        <nav>
+            <ul>
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="products.html">Products</a></li>
+                <li><a href="cart.html">Cart</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="product-detail" data-id="10" data-name="Vans Old Skool" data-price="60">
+            <div class="product-images">
+                <img src="https://i.pinimg.com/564x/7a/7e/b5/7a7eb55fb5c3357f8caee39c072605bf.jpg" alt="Vans Old Skool">
+            </div>
+            <div class="product-info">
+                <h2>Vans Old Skool</h2>
+                <p>Vans Old Skool sneakers are a classic choice for skaters and fashion enthusiasts alike. With their durable construction and timeless design, these sneakers are built to last.</p>
+                <p>Price: $60</p>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+        </section>
+        <h2>Cart</h2>
+        <ul class="cart" id="cart"></ul>
+        <div class="cart-total">
+            <strong>Total: $<span id="total-amount">0.00</span></strong>
+        </div>
+        <div class="checkout">
+            <button id="checkout-button">Proceed to Checkout</button>
+            <button id="remove-all-button">Remove All</button>
+        </div>
+    </main>
+    <script src="../script.js"></script>
+</body>
+</html>
