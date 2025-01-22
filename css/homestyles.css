@@ -67,7 +67,7 @@ nav ul li a {
     text-decoration: none;
 }
 .hero {
-    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://i.pinimg.com/564x/7c/e7/4d/7ce74d3a77ed3dfbca8cd55bd5008d19.jpg') no-repeat center center/cover;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0)), url('../images/logo/hero.PNG') no-repeat center center/cover;
     height: 400px;
     display: flex;
     flex-direction: column;

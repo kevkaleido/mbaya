@@ -3,14 +3,14 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Mbaya Turtleneck Sleeveless Tight</title>
+  <title>Mbaya Turtleneck long sleeve Tight</title>
   <link rel="stylesheet" href="../styles.css">
 </head>
 <body>
   <header>
     <div class="logo">
       <img src="../images/logo/mbaya.png" alt="Mbaya Logo" style="height:40px; vertical-align:middle;">
-      Mbaya
+      
     </div>
     <nav>
       <ul>
@@ -21,23 +21,62 @@
     </nav>
   </header>
 
-  <!-- Use data-* on the main container -->
   <main>
+    <!-- Notice data attributes used by our script.js (id, name, price) -->
     <section 
       class="product-detail" 
       data-id="1" 
-      data-name="Mbaya Turtleneck Sleeveless Tight" 
-      data-price="130">
-      
+      data-name="Mbaya Turtleneck long sleeve Tight" 
+      data-price="18000"
+    >
       <div class="product-images">
-        <img src="../images/products/turtleneck.jpg" alt="Mbaya Turtleneck Sleeveless Tight"/>
-      </div>
+        <!-- Main display -->
+        <div class="main-image">
+          <img 
+            id="main-product-image"
+            src="../images/products/mb_tight_tn.JPG" 
+            alt="Mbaya Turtleneck long sleeve Tight (Main)" 
+          />
+        </div>
+        
+        <!-- Thumbnails -->
+        <!-- <div class="thumbnails">
+          <img 
+            src="../images/products/turtleneck.jpg" 
+            alt="Turtleneck Alternate 1" 
+            class="thumbnail" 
+            data-full="../images/products/turtleneck.jpg"
+          >
+          <img 
+            src="../images/products/turtleneck2.jpg" 
+            alt="Turtleneck Alternate 2" 
+            class="thumbnail" 
+            data-full="../images/products/turtleneck2.jpg"
+          >
+          <img 
+            src="../images/products/turtleneck3.jpg" 
+            alt="Turtleneck Alternate 3" 
+            class="thumbnail" 
+            data-full="../images/products/turtleneck3.jpg"
+          >
+          <img 
+            src="../images/products/turtleneck4.jpg" 
+            alt="Turtleneck Alternate 4" 
+            class="thumbnail" 
+            data-full="../images/products/turtleneck4.jpg"
+          >
+        </div>
+      </div> -->
 
       <div class="product-info">
-        <h2>Mbaya Turtleneck Sleeveless Tight</h2>
-        <p>A sleek, form-fitting sleeveless turtleneck for every occasion.</p>
-        <p>Price: ₦130</p>
+        <h2>Mbaya Turtleneck long sleeve Tight</h2>
+        <p>
+          A sleek, form-fitting long sleeve turtleneck that offers both style 
+          and comfort. Perfect for layering or wearing on its own.
+        </p>
+        <p>Price: ₦18000</p>
 
+        <!-- Optional size selection -->
         <div>
           <h4>Select Size:</h4>
           <label><input type="radio" name="size" value="S"> S</label>
@@ -62,7 +101,21 @@
     </div>
   </main>
 
-  <!-- Ensure path is correct if your script.js is one folder above -->
+  <!-- Ensure the path to script.js is correct for your project -->
   <script src="../script.js"></script>
+  <script>
+    // Simple thumbnail swap logic:
+    document.addEventListener('DOMContentLoaded', () => {
+      const mainImage = document.getElementById('main-product-image');
+      const thumbnails = document.querySelectorAll('.thumbnail');
+
+      thumbnails.forEach(thumb => {
+        thumb.addEventListener('click', () => {
+          const fullImageSrc = thumb.getAttribute('data-full');
+          mainImage.src = fullImageSrc;
+        });
+      });
+    });
+  </script>
 </body>
 </html>

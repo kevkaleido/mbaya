@@ -1,44 +1,90 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Product Detail</title>
-    <link rel="stylesheet" href="../styles.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Mbaya Sleeveless Turtleneck - Carton Color</title>
+  <link rel="stylesheet" href="../styles.css">
 </head>
 <body>
-    <header>
-        <div class="logo">Footwear Shop</div>
-        <nav>
-            <ul>
-                <li><a href="../index.html">Home</a></li>
-                <li><a href="products.html">Products</a></li>
-                <li><a href="cart.html">Cart</a></li>
-            </ul>
-        </nav>
-    </header>
-    <main>
-        <section class="product-detail" data-id="2" data-name="Run GG rhinestone-embellished sneakers" data-price="1190">
-            <div class="product-images">
-                <img src="https://i.pinimg.com/564x/e4/bf/7c/e4bf7c321456f5bb5a1d4e300ad335d2.jpg" alt="Gucci Crystal GG Run">
-            </div>
-            <div class="product-info">
-                <h2>Run GG rhinestone-embellished sneakers</h2>
-                <p>The Run GG rhinestone-embellished sneakers combine luxury with street style. Featuring dazzling rhinestone embellishments and the signature GG motif, these sneakers are a statement piece.</p>
-                <p>Price: $1,190</p>
-                <button class="add-to-cart">Add to Cart</button>
-            </div>
-        </section>
-        <h2>Cart</h2>
-        <ul class="cart" id="cart"></ul>
-        <div class="cart-total">
-            <strong>Total: $<span id="total-amount">0.00</span></strong>
+  <header>
+    <div class="logo">
+      <img src="../images/logo/mbaya.png" alt="Mbaya Logo" style="height:40px; vertical-align:middle;">
+    </div>
+    <nav>
+      <ul>
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="products.html">Products</a></li>
+        <li><a href="cart.html">Cart</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <!-- Product Details -->
+    <section 
+      class="product-detail" 
+      data-id="2" 
+      data-name="Mbaya Sleeveless Turtleneck - Carton Color" 
+      data-price="17500"
+    >
+      <div class="product-images">
+        <!-- Main display -->
+        <div class="main-image">
+          <img 
+            id="main-product-image"
+            src="../images/products/mb_sleeveless_carton_tn.JPEG" 
+            alt="Mbaya Sleeveless Turtleneck - Carton Color (Main)" 
+          />
         </div>
-        <div class="checkout">
-            <button id="checkout-button">Proceed to Checkout</button>
-            <button id="remove-all-button">Remove All</button>
+      </div>
+
+      <div class="product-info">
+        <h2>Mbaya Sleeveless Turtleneck - Carton Color</h2>
+        <p>
+          A stylish sleeveless turtleneck in a rich carton color. 
+          Designed for both comfort and elegance, perfect for any occasion.
+        </p>
+        <p>Price: ₦17,500</p>
+
+        <!-- Optional size selection -->
+        <div>
+          <h4>Select Size:</h4>
+          <label><input type="radio" name="size" value="S"> S</label>
+          <label><input type="radio" name="size" value="M"> M</label>
+          <label><input type="radio" name="size" value="L"> L</label>
         </div>
-    </main>
-    <script src="../script.js"></script>
+
+        <button class="add-to-cart">Add to Cart</button>
+      </div>
+    </section>
+
+    <div class="cartt">
+      <h2>Cart</h2>
+      <ul class="cart" id="cart"></ul>
+      <div class="cart-total">
+        <strong>Total: ₦<span id="total-amount">0.00</span></strong>
+      </div>
+      <div class="checkout">
+        <button id="checkout-button">Proceed to Checkout</button>
+        <button id="remove-all-button">Remove All</button>
+      </div>
+    </div>
+  </main>
+
+  <script src="../script.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const mainImage = document.getElementById('main-product-image');
+      const thumbnails = document.querySelectorAll('.thumbnail');
+
+      thumbnails.forEach(thumb => {
+        thumb.addEventListener('click', () => {
+          const fullImageSrc = thumb.getAttribute('data-full');
+          mainImage.src = fullImageSrc;
+        });
+      });
+    });
+  </script>
 </body>
 </html>
