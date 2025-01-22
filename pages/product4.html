@@ -1,44 +1,90 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Product Detail</title>
-    <link rel="stylesheet" href="../styles.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Mbaya Sleeveless Crop Length - Carton Color</title>
+  <link rel="stylesheet" href="../styles.css">
 </head>
 <body>
-    <header>
-        <div class="logo">Footwear Shop</div>
-        <nav>
-            <ul>
-                <li><a href="../index.html">Home</a></li>
-                <li><a href="products.html">Products</a></li>
-                <li><a href="cart.html">Cart</a></li>
-            </ul>
-        </nav>
-    </header>
-    <main>
-        <section class="product-detail" data-id="4" data-name="Isabel Marant Beth" data-price="490">
-            <div class="product-images">
-                <img src="https://images.pexels.com/photos/2529158/pexels-photo-2529158.jpeg" alt="Isabel Marant Beth">
-            </div>
-            <div class="product-info">
-                <h2>Isabel Marant Beth</h2>
-                <p>Isabel Marant Beth sneakers offer a chic and trendy look, perfect for fashion-forward individuals. These sneakers are crafted with high-quality materials for both style and durability.</p>
-                <p>Price: $490</p>
-                <button class="add-to-cart">Add to Cart</button>
-            </div>
-        </class=>
-        <h2>Cart</h2>
-        <ul class="cart" id="cart"></ul>
-        <div class="cart-total">
-            <strong>Total: $<span id="total-amount">0.00</span></strong>
+  <header>
+    <div class="logo">
+      <img src="../images/logo/mbaya.png" alt="Mbaya Logo" style="height:40px; vertical-align:middle;">
+    </div>
+    <nav>
+      <ul>
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="products.html">Products</a></li>
+        <li><a href="cart.html">Cart</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <!-- Product Details -->
+    <section 
+      class="product-detail" 
+      data-id="4" 
+      data-name="Mbaya Sleeveless Crop Length - Carton Color" 
+      data-price="16500"
+    >
+      <div class="product-images">
+        <!-- Main display -->
+        <div class="main-image">
+          <img 
+            id="main-product-image"
+            src="../images/products/mb_crop_carton.JPG" 
+            alt="Mbaya Sleeveless Crop Length - Carton Color (Main)" 
+          />
         </div>
-        <div class="checkout">
-            <button id="checkout-button">Proceed to Checkout</button>
-            <button id="remove-all-button">Remove All</button>
+      </div>
+
+      <div class="product-info">
+        <h2>Mbaya Sleeveless Crop Length - Carton Color</h2>
+        <p>
+          A sleeveless crop-length top in a refined carton color. 
+          Perfect for casual wear or layering with other stylish pieces.
+        </p>
+        <p>Price: ₦16,500</p>
+
+        <!-- Optional size selection -->
+        <div>
+          <h4>Select Size:</h4>
+          <label><input type="radio" name="size" value="S"> S</label>
+          <label><input type="radio" name="size" value="M"> M</label>
+          <label><input type="radio" name="size" value="L"> L</label>
         </div>
-    </main>
-    <script src="../script.js"></script>
+
+        <button class="add-to-cart">Add to Cart</button>
+      </div>
+    </section>
+
+    <div class="cartt">
+      <h2>Cart</h2>
+      <ul class="cart" id="cart"></ul>
+      <div class="cart-total">
+        <strong>Total: ₦<span id="total-amount">0.00</span></strong>
+      </div>
+      <div class="checkout">
+        <button id="checkout-button">Proceed to Checkout</button>
+        <button id="remove-all-button">Remove All</button>
+      </div>
+    </div>
+  </main>
+
+  <script src="../script.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const mainImage = document.getElementById('main-product-image');
+      const thumbnails = document.querySelectorAll('.thumbnail');
+
+      thumbnails.forEach(thumb => {
+        thumb.addEventListener('click', () => {
+          const fullImageSrc = thumb.getAttribute('data-full');
+          mainImage.src = fullImageSrc;
+        });
+      });
+    });
+  </script>
 </body>
 </html>
