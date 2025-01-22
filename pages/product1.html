@@ -3,12 +3,15 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Product Detail</title>
-  <link rel="stylesheet" href="../styles.css" />
+  <title>Mbaya Turtleneck Sleeveless Tight</title>
+  <link rel="stylesheet" href="../styles.css">
 </head>
 <body>
   <header>
-    <div class="logo">Footwear Shop</div>
+    <div class="logo">
+      <img src="../images/logo/mbaya.png" alt="Mbaya Logo" style="height:40px; vertical-align:middle;">
+      Mbaya
+    </div>
     <nav>
       <ul>
         <li><a href="../index.html">Home</a></li>
@@ -17,96 +20,49 @@
       </ul>
     </nav>
   </header>
-  
+
+  <!-- Use data-* on the main container -->
   <main>
-    <!-- 
-      Wrap product detail in a container that includes:
-        1) Carousel controls and multiple images
-        2) Size selector (Small, Medium, Large)
-    -->
     <section 
       class="product-detail" 
       data-id="1" 
-      data-name="Nike Air Max 90" 
-      data-price="130"
-    >
-      <!-- PRODUCT IMAGES CAROUSEL -->
-      <div class="product-images carousel">
-        <!-- Carousel slider track -->
-        <div class="carousel-track">
-          <img 
-            src="https://i.pinimg.com/736x/3d/ec/4a/3dec4afc5f975625518057a74627ec92.jpg" 
-            alt="Nike Air Max - 1"
-            class="carousel-image active"
-          />
-          <img 
-            src="https://i.pinimg.com/736x/44/88/36/448836f0d792e51962657a6724db5475.jpg" 
-            alt="Nike Air Max - 2"
-            class="carousel-image"
-          />
-          <img 
-            src="https://i.pinimg.com/736x/67/01/80/67018051a4e0a3ce6e5bfbb825331468.jpg"
-            alt="Nike Air Max - 3"
-            class="carousel-image"
-          />
-        </div>
-        
-        <!-- Carousel navigation arrows -->
-        <button class="carousel-button prev-button">&larr;</button>
-        <button class="carousel-button next-button">&rarr;</button>
-        
-        <!-- Carousel indicators (optional) -->
-        <div class="carousel-indicators">
-          <span class="indicator active" data-slide="0"></span>
-          <span class="indicator" data-slide="1"></span>
-          <span class="indicator" data-slide="2"></span>
-        </div>
-      </div>
+      data-name="Mbaya Turtleneck Sleeveless Tight" 
+      data-price="130">
       
-      <!-- PRODUCT INFO -->
+      <div class="product-images">
+        <img src="../images/products/turtleneck.jpg" alt="Mbaya Turtleneck Sleeveless Tight"/>
+      </div>
+
       <div class="product-info">
-        <h2>Nike Air Max 90</h2>
-        <p>
-          The Nike Air Max 90 stays true to its OG running roots 
-          with a waffle outsole, stitched overlays, and classic 
-          TPU accents. Bold colors celebrate the individual design.
-        </p>
-        <p>Price: $130</p>
-        
-        <!-- SIZE SELECTOR -->
-        <div class="product-sizes">
-          <p>Select Size:</p>
-          <label>
-            <input type="radio" name="size" value="Small" /> Small
-          </label>
-          <label>
-            <input type="radio" name="size" value="Medium" /> Medium
-          </label>
-          <label>
-            <input type="radio" name="size" value="Large" /> Large
-          </label>
+        <h2>Mbaya Turtleneck Sleeveless Tight</h2>
+        <p>A sleek, form-fitting sleeveless turtleneck for every occasion.</p>
+        <p>Price: ₦130</p>
+
+        <div>
+          <h4>Select Size:</h4>
+          <label><input type="radio" name="size" value="S"> S</label>
+          <label><input type="radio" name="size" value="M"> M</label>
+          <label><input type="radio" name="size" value="L"> L</label>
         </div>
-        
+
         <button class="add-to-cart">Add to Cart</button>
       </div>
     </section>
-    
-    <!-- CART DISPLAY -->
+
     <div class="cartt">
       <h2>Cart</h2>
       <ul class="cart" id="cart"></ul>
       <div class="cart-total">
-        <strong>Total: $<span id="total-amount">0.00</span></strong>
+        <strong>Total: ₦<span id="total-amount">0.00</span></strong>
       </div>
       <div class="checkout">
-        <!-- Proceed to checkout now triggers a WhatsApp flow -->
         <button id="checkout-button">Proceed to Checkout</button>
         <button id="remove-all-button">Remove All</button>
       </div>
     </div>
   </main>
-  
-  <!-- Link to the refactored script that includes the carousel and new checkout logic -->
+
+  <!-- Ensure path is correct if your script.js is one folder above -->
   <script src="../script.js"></script>
 </body>
 </html>
