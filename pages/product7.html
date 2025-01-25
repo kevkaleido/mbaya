@@ -1,44 +1,95 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Product Detail</title>
-    <link rel="stylesheet" href="../styles.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Mbaya Glitch</title>
+  <link rel="stylesheet" href="../styles.css">
 </head>
 <body>
-    <header>
-        <div class="logo">Footwear Shop</div>
-        <nav>
-            <ul>
-                <li><a href="../index.html">Home</a></li>
-                <li><a href="products.html">Products</a></li>
-                <li><a href="cart.html">Cart</a></li>
-            </ul>
-        </nav>
-    </header>
-    <main>
-        <section class="product-detail" data-id="7" data-name="New Balance 990v5" data-price="175">
-            <div class="product-images">
-                <img src="https://i.pinimg.com/564x/3a/c6/49/3ac649c3c4afa4faba3e60e99ad99fd3.jpg" alt="New Balance 990v5">
-            </div>
-            <div class="product-info">
-                <h2>New Balance 990v5</h2>
-                <p>The New Balance 990v5 is a perfect blend of cushioning and stability. These sneakers provide exceptional comfort and support, making them ideal for daily wear.</p>
-                <p>Price: $175</p>
-                <button class="add-to-cart">Add to Cart</button>
-            </div>
-        </section>
-        <h2>Cart</h2>
-        <ul class="cart" id="cart"></ul>
-        <div class="cart-total">
-            <strong>Total: $<span id="total-amount">0.00</span></strong>
+  <header>
+    <div class="logo">
+      <img src="../images/logo/mbaya.png" alt="Mbaya Logo" style="height:40px; vertical-align:middle;">
+    </div>
+    <nav>
+      <ul>
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="products.html">Products</a></li>
+        <li><a href="cart.html">Cart</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <!-- Product Details -->
+    <section 
+      class="product-detail" 
+      data-id="7" 
+      data-name="Mbaya Glitch" 
+      data-price="17000"
+    >
+      <div class="product-images">
+        <!-- Main display -->
+        <div class="main-image">
+          <img 
+            id="main-product-image"
+            src="../images/products/mb_glitch_crop.JPEG" 
+            alt="Mbaya Glitch (Main)" 
+          />
         </div>
-        <div class="checkout">
-            <button id="checkout-button">Proceed to Checkout</button>
-            <button id="remove-all-button">Remove All</button>
+        <div class="thumbnails">
+          <img 
+            class="thumbnail" 
+            src="../images/products/mb_glitch_crop_back.JPEG" 
+            data-full="../images/products/mb_glitch_crop_back.JPEG" 
+            alt="Thumbnail 1" 
+          />
         </div>
-    </main>
-    <script src="../script.js"></script>
+      </div>
+
+      <div class="product-info">
+        <h2>Mbaya Glitch Print Piece</h2>
+        <p>An mbaya piece featuring a glitch-inspired design.</p>
+        <p>Price: ₦17,000</p>
+
+        <!-- Optional size selection -->
+        <div>
+          <h4>Select Size:</h4>
+          <label><input type="radio" name="size" value="S"> S</label>
+          <label><input type="radio" name="size" value="M"> M</label>
+          <label><input type="radio" name="size" value="L"> L</label>
+        </div>
+
+        <button class="add-to-cart">Add to Cart</button>
+      </div>
+    </section>
+
+    <div class="cartt">
+      <h2>Cart</h2>
+      <ul class="cart" id="cart"></ul>
+      <div class="cart-total">
+        <strong>Total: ₦<span id="total-amount">0.00</span></strong>
+      </div>
+      <div class="checkout">
+        <button id="checkout-button">Proceed to Checkout</button>
+        <button id="remove-all-button">Remove All</button>
+      </div>
+    </div>
+  </main>
+
+  <script src="../script.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const mainImage = document.getElementById('main-product-image');
+      const thumbnails = document.querySelectorAll('.thumbnail');
+
+      thumbnails.forEach(thumb => {
+        thumb.addEventListener('click', () => {
+          const fullImageSrc = thumb.getAttribute('data-full');
+          mainImage.src = fullImageSrc;
+        });
+      });
+    });
+  </script>
 </body>
 </html>
