@@ -123,7 +123,7 @@ document.addEventListener('DOMContentLoaded', () => {
       });
   
       message += `\nTotal: ₦${total.toFixed(2)}\nAdditional notes:\n`;
-      const phoneNumber = '+2348163523594';
+      const phoneNumber = '+2347080795642';
       const whatsappLink = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
       window.open(whatsappLink, '_blank');
     }
