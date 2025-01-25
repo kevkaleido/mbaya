@@ -102,23 +102,6 @@
 
   <!-- Ensure the path to script.js is correct for your project -->
   <script src="../script.js"></script>
-  <script>
-    // Thumbnail swap logic:
-    document.addEventListener('DOMContentLoaded', () => {
-      const mainImage = document.getElementById('main-product-image');
-      const thumbnails = document.querySelectorAll('.thumbnail');
 
-      thumbnails.forEach(thumb => {
-        thumb.addEventListener('click', () => {
-          const fullImageSrc = thumb.getAttribute('data-full');
-          mainImage.src = fullImageSrc;
-
-          // Optional: Highlight the selected thumbnail
-          thumbnails.forEach(t => t.classList.remove('selected'));
-          thumb.classList.add('selected');
-        });
-      });
-    });
-  </script>
 </body>
 </html>
