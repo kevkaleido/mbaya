@@ -33,11 +33,21 @@
         <div class="main-image">
           <img 
             id="main-product-image"
-            src="../images/products/mb_sleeveless_carton_tn.JPEG" 
+            src="../images/products/mb_sleeveless_carton_tn.JPG" 
             alt="Mbaya Sleeveless Turtleneck - Carton Color (Main)" 
           />
         </div>
+        <div class="thumbnails"></div>
+          <img 
+            class="thumbnail" 
+            src="../images/products/mb_sleeveless_carton_tn_donutkillmyvibe.JPEG" 
+            data-full="../images/products/mb_sleeveless_carton_tn_donutkillmyvibe" 
+            alt="Thumbnail 1" 
+          />
+      
+        </div>
       </div>
+      
 
       <div class="product-info">
         <h2>Mbaya Sleeveless Turtleneck - Carton Color</h2>
@@ -71,19 +81,6 @@
     </div>
   </main>
 
-  <script src="../script.js"></script>
-  <script>
-    document.addEventListener('DOMContentLoaded', () => {
-      const mainImage = document.getElementById('main-product-image');
-      const thumbnails = document.querySelectorAll('.thumbnail');
-
-      thumbnails.forEach(thumb => {
-        thumb.addEventListener('click', () => {
-          const fullImageSrc = thumb.getAttribute('data-full');
-          mainImage.src = fullImageSrc;
-        });
-      });
-    });
-  </script>
+  
 </body>
 </html>

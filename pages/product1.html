@@ -3,14 +3,13 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Mbaya Turtleneck long sleeve Tight</title>
+  <title>Mbaya Turtleneck Long Sleeve Tight</title>
   <link rel="stylesheet" href="../styles.css">
 </head>
 <body>
   <header>
     <div class="logo">
       <img src="../images/logo/mbaya.png" alt="Mbaya Logo" style="height:40px; vertical-align:middle;">
-      
     </div>
     <nav>
       <ul>
@@ -26,7 +25,7 @@
     <section 
       class="product-detail" 
       data-id="1" 
-      data-name="Mbaya Turtleneck long sleeve Tight" 
+      data-name="Mbaya Turtleneck Long Sleeve Tight" 
       data-price="18000"
     >
       <div class="product-images">
@@ -35,46 +34,46 @@
           <img 
             id="main-product-image"
             src="../images/products/mb_tight_tn.JPG" 
-            alt="Mbaya Turtleneck long sleeve Tight (Main)" 
+            alt="Mbaya Turtleneck Long Sleeve Tight (Main)" 
           />
         </div>
         
         <!-- Thumbnails -->
-        <!-- <div class="thumbnails">
+        <div class="thumbnails">
           <img 
-            src="../images/products/turtleneck.jpg" 
-            alt="Turtleneck Alternate 1" 
             class="thumbnail" 
-            data-full="../images/products/turtleneck.jpg"
-          >
+            src="../images/products/mb_tight_tn_back.JPG" 
+            data-full="../images/products/mb_tight_tn.JPG" 
+            alt="Thumbnail 1" 
+          />
+          <!-- <img 
+            class="thumbnail" 
+            src="../images/products/mb_tight_tn.JPG" 
+            data-full="../images/products/mb_tight_tn_2.JPG" 
+            alt="Thumbnail 2" 
+          />
           <img 
-            src="../images/products/turtleneck2.jpg" 
-            alt="Turtleneck Alternate 2" 
             class="thumbnail" 
-            data-full="../images/products/turtleneck2.jpg"
-          >
+            src="../images/products/mb_tight_tn.JPG" 
+            data-full="../images/products/mb_tight_tn_3.JPG" 
+            alt="Thumbnail 3" 
+          />
           <img 
-            src="../images/products/turtleneck3.jpg" 
-            alt="Turtleneck Alternate 3" 
             class="thumbnail" 
-            data-full="../images/products/turtleneck3.jpg"
-          >
-          <img 
-            src="../images/products/turtleneck4.jpg" 
-            alt="Turtleneck Alternate 4" 
-            class="thumbnail" 
-            data-full="../images/products/turtleneck4.jpg"
-          >
+            src="../images/products/mb_tight_tn.JPG" 
+            data-full="../images/products/mb_tight_tn_4.JPG" 
+            alt="Thumbnail 4" 
+          /> -->
         </div>
-      </div> -->
-
+      </div>
+      
       <div class="product-info">
-        <h2>Mbaya Turtleneck long sleeve Tight</h2>
+        <h2>Mbaya Turtleneck Long Sleeve Tight</h2>
         <p>
           A sleek, form-fitting long sleeve turtleneck that offers both style 
           and comfort. Perfect for layering or wearing on its own.
         </p>
-        <p>Price: ₦18000</p>
+        <p>Price: ₦18,000</p>
 
         <!-- Optional size selection -->
         <div>
@@ -104,7 +103,7 @@
   <!-- Ensure the path to script.js is correct for your project -->
   <script src="../script.js"></script>
   <script>
-    // Simple thumbnail swap logic:
+    // Thumbnail swap logic:
     document.addEventListener('DOMContentLoaded', () => {
       const mainImage = document.getElementById('main-product-image');
       const thumbnails = document.querySelectorAll('.thumbnail');
@@ -113,6 +112,10 @@
         thumb.addEventListener('click', () => {
           const fullImageSrc = thumb.getAttribute('data-full');
           mainImage.src = fullImageSrc;
+
+          // Optional: Highlight the selected thumbnail
+          thumbnails.forEach(t => t.classList.remove('selected'));
+          thumb.classList.add('selected');
         });
       });
     });

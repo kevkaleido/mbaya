@@ -222,22 +222,5 @@
     object-fit: cover;
   }
   
-  .thumbnails {
-    display: flex;
-    gap: 10px;
-  }
-  
-  .thumbnail {
-    cursor: pointer;
-    width: 60px;
-    height: 60px;
-    border-radius: 5px;
-    object-fit: cover;
-    transition: transform 0.2s;
-  }
-  
-  .thumbnail:hover {
-    transform: scale(1.05);
-  }
   
   
