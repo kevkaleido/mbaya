@@ -1,14 +1,17 @@
 <!DOCTYPE html>
-<html lang="en">
+< lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Product Detail</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mbaya Acid Wash Tee Shirt with Prints</title>
     <link rel="stylesheet" href="../styles.css">
 </head>
+
 <body>
     <header>
-        <div class="logo">Footwear Shop</div>
+        <div class="logo"> <img src="../images/logo/mbaya.png" alt="Mbaya Logo"
+                style="height:40px; vertical-align:middle;"> </div>
         <nav>
             <ul>
                 <li><a href="../index.html">Home</a></li>
@@ -17,28 +20,45 @@
             </ul>
         </nav>
     </header>
-    <main>
-        <section class="product-detail" data-id="9" data-name="Converse Chuck Taylor" data-price="55">
-            <div class="product-images">
-                <img src="https://i.pinimg.com/564x/85/9e/e4/859ee41191f5bad32c898cb7fc5787ca.jpg" alt="Converse Chuck Taylor">
+    <main> <!-- Product Details -->
+        <section class="product-detail" data-id="9" data-name="Mbaya Acid Wash Tee Shirt with Prints"
+            data-price="15000">
+            <div class="product-images"> <!-- Main display -->
+                <div class="main-image"> <img id="main-product-image" src="../images/products/mb_acid_wash_tee.JPEG"
+                        alt="Mbaya Acid Wash Tee Shirt with Prints (Main)" /> </div>
+                <div class="thumbnails"> <img class="thumbnail" src="../images/products/mb_acid_wash_tee_back.JPEG"
+                        data-full="../images/products/mb_acid_wash_tee_back.JPEG" alt="Thumbnail 1" /> </div>
             </div>
             <div class="product-info">
-                <h2>Converse Chuck Taylor</h2>
-                <p>Converse Chuck Taylor sneakers are timeless and versatile, perfect for any casual outfit. Known for their comfort and classic design, these sneakers are a wardrobe staple.</p>
-                <p>Price: $55</p>
-                <button class="add-to-cart">Add to Cart</button>
+                <h2>Mbaya Acid Wash Tee Shirt with Prints</h2>
+                <p>A classic acid wash tee shirt featuring four unique print designs to choose from.</p>
+                <p>Price: ₦15,000</p> <!-- Size selection -->
+                <div>
+                    <h4>Select Size:</h4>
+                    <label><input type="radio" name="size" value="S"> S</label>
+                    <label><input type="radio" name="size" value="M"> M</label>
+                    <label><input type="radio" name="size" value="L"> L</label>
+                    <label><input type="radio" name="size" value="XL"> XL</label>
+                    <label><input type="radio" name="size" value="XXL"> XXL</label>
+                </div><!-- Print selection -->
+                <div>
+                    <h4>Select Print:</h4> <select id="print-select">
+                        <option value="print1">Print 1</option>
+                        <option value="print2">Print 2</option>
+                        <option value="print3">Print 3</option>
+                        <option value="print4">Print 4</option>
+                    </select>
+                </div> <button class="add-to-cart">Add to Cart</button>
             </div>
         </section>
-        <h2>Cart</h2>
-        <ul class="cart" id="cart"></ul>
-        <div class="cart-total">
-            <strong>Total: $<span id="total-amount">0.00</span></strong>
-        </div>
-        <div class="checkout">
-            <button id="checkout-button">Proceed to Checkout</button>
-            <button id="remove-all-button">Remove All</button>
+        <div class="cartt">
+            <h2>Cart</h2>
+            <ul class="cart" id="cart"></ul>
+            <div class="cart-total"> <strong>Total: ₦<span id="total-amount">0.00</span></strong> </div>
+            <div class="checkout"> <button id="checkout-button">Proceed to Checkout</button> <button
+                    id="remove-all-button">Remove All</button> </div>
         </div>
     </main>
     <script src="../script.js"></script>
 </body>
-</html>
+
