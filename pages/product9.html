@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-< lang="en">
+<html lang="en">
 
 <head>
     <meta charset="UTF-8" />
@@ -10,8 +10,9 @@
 
 <body>
     <header>
-        <div class="logo"> <img src="../images/logo/mbaya.png" alt="Mbaya Logo"
-                style="height:40px; vertical-align:middle;"> </div>
+        <div class="logo">
+            <img src="../images/logo/mbaya.png" alt="Mbaya Logo" style="height:40px; vertical-align:middle;">
+        </div>
         <nav>
             <ul>
                 <li><a href="../index.html">Home</a></li>
@@ -21,18 +22,54 @@
         </nav>
     </header>
     <main> <!-- Product Details -->
-        <section class="product-detail" data-id="9" data-name="Mbaya Acid Wash Tee Shirt with Prints"
-            data-price="15000">
-            <div class="product-images"> <!-- Main display -->
-                <div class="main-image"> <img id="main-product-image" src="../images/products/mb_acid_wash_tee.JPEG"
-                        alt="Mbaya Acid Wash Tee Shirt with Prints (Main)" /> </div>
-                <div class="thumbnails"> <img class="thumbnail" src="../images/products/mb_acid_wash_tee_back.JPEG"
-                        data-full="../images/products/mb_acid_wash_tee_back.JPEG" alt="Thumbnail 1" /> </div>
+        <section class="product-detail" data-id="9" data-name="Mbaya Acid Wash Tee Shirt with Prints" data-price="24000">
+            <div class="product-images"> <!-- Main display and Thumbnails -->
+              
+                <div class="thumbnails-wrapper"> <!-- Wrapper for Thumbnails -->
+                    <div class="thumbnails">
+                        <!-- Main Image Thumbnail -->
+                        <img class="thumbnail active" 
+                             src="../images/products/mb_acidwash.JPEG" 
+                             data-full="../images/products/mb_acidwash.JPEG" 
+                             alt="Main Thumbnail" />
+
+                        <!-- Thumbnail 1 -->
+                        <img class="thumbnail" 
+                             src="../images/products/mb_acidwash_cerealkiller.JPEG" 
+                             data-full="../images/products/mb_acid_wash_tee_back.JPEG" 
+                             alt="Thumbnail 1" />
+                
+                        <!-- Thumbnail 2 -->
+                        <img class="thumbnail" 
+                             src="../images/products/mb_acidwash_sHIt.JPEG" 
+                             data-full="../images/products/mb_acidwash_full2.JPEG" 
+                             alt="Thumbnail 2" />
+                
+                        <!-- Thumbnail 3 -->
+                        <img class="thumbnail" 
+                             src="../images/products/mb_acidwash_beachpeas.JPEG" 
+                             data-full="../images/products/mb_acidwash_full3.JPEG" 
+                             alt="Thumbnail 3" />
+                
+                        <!-- Thumbnail 4 -->
+                        <img class="thumbnail" 
+                             src="../images/products/mb_acidwash_glitch.JPEG" 
+                             data-full="../images/products/mb_acidwash_full4.JPEG" 
+                             alt="Thumbnail 4" />
+                
+                        <!-- Thumbnail 5 -->
+                        <img class="thumbnail" 
+                             src="../images/products/mb_acidwash_purplebeachpeas.JPEG" 
+                             data-full="../images/products/mb_acidwash_full5.JPEG" 
+                             alt="Thumbnail 5" />
+                    </div>
+                </div>
             </div>
+            
             <div class="product-info">
                 <h2>Mbaya Acid Wash Tee Shirt with Prints</h2>
-                <p>A classic acid wash tee shirt featuring four unique print designs to choose from.</p>
-                <p>Price: ₦15,000</p> <!-- Size selection -->
+                <p>A classic acid wash tee shirt featuring unique print designs to choose from.</p>
+                <p>Price: ₦24,000</p> <!-- Size selection -->
                 <div>
                     <h4>Select Size:</h4>
                     <label><input type="radio" name="size" value="S"> S</label>
@@ -42,23 +79,29 @@
                     <label><input type="radio" name="size" value="XXL"> XXL</label>
                 </div><!-- Print selection -->
                 <div>
-                    <h4>Select Print:</h4> <select id="print-select">
+                    <h4>Select Print:</h4> 
+                    <select id="print-select">
                         <option value="print1">Print 1</option>
                         <option value="print2">Print 2</option>
                         <option value="print3">Print 3</option>
                         <option value="print4">Print 4</option>
+                        <option value="print5">Print 5</option>
                     </select>
-                </div> <button class="add-to-cart">Add to Cart</button>
+                </div> 
+                <button class="add-to-cart">Add to Cart</button>
             </div>
         </section>
         <div class="cartt">
             <h2>Cart</h2>
             <ul class="cart" id="cart"></ul>
             <div class="cart-total"> <strong>Total: ₦<span id="total-amount">0.00</span></strong> </div>
-            <div class="checkout"> <button id="checkout-button">Proceed to Checkout</button> <button
-                    id="remove-all-button">Remove All</button> </div>
+            <div class="checkout"> 
+                <button id="checkout-button">Proceed to Checkout</button> 
+                <button id="remove-all-button">Remove All</button> 
+            </div>
         </div>
     </main>
     <script src="../script.js"></script>
 </body>
 
+</html>
