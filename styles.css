@@ -209,18 +209,110 @@
   .cart {
     padding: 20px;
   }
-  .product-images {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
+ /* Container for product images */
+.product-images {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 800px; /* Adjust as needed */
+  margin: 0 auto; /* Center the container */
+}
+
+/* Main product image styling */
+.main-image img {
+  width: 100%;
+  max-width: 600px;
+  height: auto;
+  border: 1px solid #ddd; /* Optional: Add border for better visibility */
+  border-radius: 4px; /* Optional: Rounded corners */
+  margin-bottom: 20px; /* Space between main image and thumbnails */
+}
+
+/* Thumbnails navigation buttons */
+.thumbnails-navigation {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.thumbnails-navigation button {
+  padding: 5px 10px;
+  font-size: 18px;
+  cursor: pointer;
+  background-color: #f0f0f0; /* Light background */
+  border: 1px solid #ccc; /* Border for visibility */
+  border-radius: 4px; /* Rounded corners */
+  transition: background-color 0.3s, border-color 0.3s;
+}
+
+.thumbnails-navigation button:hover {
+  background-color: #e0e0e0;
+  border-color: #999;
+}
+
+/* Thumbnails wrapper to enable horizontal scrolling */
+.thumbnails-wrapper {
+  width: 100%;
+  overflow-x: auto; /* Enable horizontal scrolling */
+  margin-top: 10px;
+  padding-bottom: 10px; /* Optional: Space for scrollbar */
+  scroll-behavior: smooth; /* Smooth scrolling */
+}
+
+/* Thumbnails container */
+.thumbnails {
+  display: flex;
+  gap: 10px;
+  flex-wrap: nowrap; /* Prevent wrapping */
+  padding: 5px; /* Optional: Padding around thumbnails */
+}
+
+/* Individual thumbnail styling */
+.thumbnail {
+  flex: 0 0 auto; /* Prevent thumbnails from shrinking */
+  width: 100px;
+  height: auto;
+  cursor: pointer;
+  border: 2px solid transparent;
+  transition: border 0.3s, transform 0.3s;
+  border-radius: 4px; /* Optional: Rounded corners */
+}
+
+.thumbnail:hover {
+  border: 2px solid #ffffff;
+  transform: scale(1.05); /* Slight zoom on hover */
+}
+
+/* Active thumbnail styling */
+.thumbnail.active {
+  border: 2px solid #ffffff;
+  transform: scale(1.05);
+}
+
+/* Responsive thumbnail sizes */
+@media (max-width: 600px) {
+  .thumbnail {
+      width: 80px;
   }
-  
-  .main-image img {
-    width: 100%;
-    max-width: 350px;
-    border-radius: 8px;
-    object-fit: cover;
+}
+
+@media (min-width: 1200px) {
+  .thumbnail {
+      width: 120px;
   }
-  
-  
-  
+}
+
+/* Optional: Hide scrollbar for WebKit browsers */
+.thumbnails-wrapper::-webkit-scrollbar {
+  display: none;
+}
+
+/* Optional: Hide scrollbar for Firefox */
+.thumbnails-wrapper {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;     /* Firefox */
+}
+
+/* Additional existing styles for header, nav, main, etc. */
+/* ... */
